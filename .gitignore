@@ -1,0 +1,10 @@
+.settings.mk
+/var
+/.python
+/**/node_modules
+/**/*.egg-info
+/**/.build/
+/**/__pycache__
+/**/.pytest_cache
+/**/cache
+/**/.cache

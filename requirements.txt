@@ -1,0 +1,9 @@
+eth-ape==0.7.13
+pytest
+click
+trogon
+rich
+Jinja2
+minify-html
+ape-solidity
+watchdog[watchmedo]
