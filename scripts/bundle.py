@@ -1,11 +1,8 @@
-#!/usr/bin/env python3
-
 import os
 import gzip
 
 import minify_html
 from jinja2 import Environment, select_autoescape, FileSystemLoader
-
 
 
 def main():
@@ -19,13 +16,14 @@ def main():
 
     template = env.get_template("html/bootloader.html.j2")
 
-    # minified = minify_html.minify(
-    #     template.render(),
-    #     minify_css=True,
-    #     minify_js=True,
-    # )
+    minified = minify_html.minify(
+        template.render(),
+        # minify_css=True,
+        # minify_js=True,
+    )
 
     with open("var/www/index.html", "w") as f:
+        # f.write(minified)
         f.write(template.render())
 
     ###

@@ -48,9 +48,9 @@ async function _uri(dapp_address) {
         _usage();
     }
 
-    _print("ERC-XXXX", "UI/UX Pattern for Decentralized Apps");
+    _print("EIP-XXXX", "UI/UX Pattern for Decentralized Apps");
     _print("Standardized Launcher URL", `<a style="color: gray;" href="ipns://dappviewer.eth/#${dapp_address}">ipns://dappviewer.eth/#${dapp_address}</a>`);
-    _print("About", "This is the reference launcher for DApps compatible with ERC-XXXX.");
+    _print("About", "This is the reference launcher for DApps compatible with EIP-XXXX.");
     _print("Disclaimer", "This launcher has no relationship with the DApp being launched.");
     _print("Use at own risk", "This launcher is experimental and may not work as expected.");
 

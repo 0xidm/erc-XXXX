@@ -10,10 +10,14 @@ watch:
 		html
 
 bundle:
-	.python/bin/python3 ./bin/bundle.py
+	.python/bin/python3 ./scripts/bundle.py
+
+compile:
+	.python/bin/ape compile
+	cat .build/erc9000.json | jq ".abi" > var/erc9000.json
 
 server:
-	cd var/www && ../../.python/bin/python3 ../../bin/server.py
+	cd var/www && ../../.python/bin/python3 ../../scripts/server.py
 
 ipfs: bundle ipfs-add ipfs-pin ipfs-cache-warmup
 	@echo ok
@@ -29,10 +33,6 @@ ipfs-pin:
 
 ipfs-cache-warmup:
 	./bin/ipfs-cache-warmup.sh
-
-compile:
-	.python/bin/ape compile
-	cat .build/erc9000.json | jq ".abi" > var/erc9000.json
 
 install:
 	mkdir -p var/www
