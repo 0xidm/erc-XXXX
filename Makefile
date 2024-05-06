@@ -29,7 +29,9 @@ ipfs-add:
 	IPFS_API=$(IPFS_API) bin/add-ipfs.sh -k $(IPFS_KEY) -p
 
 ipfs-pin:
-	./bin/ipfs-pin.sh $(IPFS_HOST_1) $(IPFS_HOST_2) $(IPFS_HOST_3)
+	./bin/ipfs-pin.sh $(IPFS_HOST_1)
+	./bin/ipfs-pin.sh $(IPFS_HOST_2)
+	./bin/ipfs-pin.sh $(IPFS_HOST_3)
 
 ipfs-cache-warmup:
 	./bin/ipfs-cache-warmup.sh
